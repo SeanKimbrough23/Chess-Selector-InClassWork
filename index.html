@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selector Chess</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="assignment.js"></script>
+    <script src="./internal/test.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <ul id="results"></ul>
+        <div>
+            <h1>jQuery Selector Chess!</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                        <td>e</td>
+                        <td>f</td>
+                        <td>g</td>
+                        <td>h</td>
+                    </tr>
+                    <tr id="row-8">
+                        <td>8</td>
+                        <td class="black rook column-a" id="square-8-a">♜</td>
+                        <td class="black knight column-b" id="square-8-b">♞</td>
+                        <td class="black bishop column-c" id="square-8-c">♝</td>
+                        <td class="black queen column-d" id="square-8-d">♛</td>
+                        <td class="black king column-e" id="square-8-e">♚</td>
+                        <td class="black bishop column-f" id="square-8-f">♝</td>
+                        <td class="black knight column-g" id="square-8-g">♞</td>
+                        <td class="black rook column-h" id="square-8-h">♜</td>
+                    </tr>
+                    <tr id="row-7">
+                        <td>7</td>
+                        <td class="black pawn column-a" id="square-7-a">♟</td>
+                        <td class="black pawn column-b" id="square-7-b">♟</td>
+                        <td class="black pawn column-c" id="square-7-c">♟</td>
+                        <td class="black pawn column-d" id="square-7-d">♟</td>
+                        <td class="black pawn column-e" id="square-7-e">♟</td>
+                        <td class="black pawn column-f" id="square-7-f">♟</td>
+                        <td class="black pawn column-g" id="square-7-g">♟</td>
+                        <td class="black pawn column-h" id="square-7-h">♟</td>
+                    </tr>
+                    <tr id="row-6">
+                        <td>6</td>
+                        <td id="square-6-a" class="column-a"></td>
+                        <td id="square-6-b" class="column-b"></td>
+                        <td id="square-6-c" class="column-c"></td>
+                        <td id="square-6-d" class="column-d"></td>
+                        <td id="square-6-e" class="column-e"></td>
+                        <td id="square-6-f" class="column-f"></td>
+                        <td id="square-6-g" class="column-g"></td>
+                        <td id="square-6-h" class="column-h"></td>
+                    </tr>
+                    <tr id="row-5">
+                        <td>5</td>
+                        <td id="square-5-a" class="column-a"></td>
+                        <td id="square-5-b" class="column-b"></td>
+                        <td id="square-5-c" class="column-c"></td>
+                        <td id="square-5-d" class="column-d"></td>
+                        <td id="square-5-e" class="column-e"></td>
+                        <td id="square-5-f" class="column-f"></td>
+                        <td id="square-5-g" class="column-g"></td>
+                        <td id="square-5-h" class="column-h"></td>
+                    </tr>
+                    <tr id="row-4">
+                        <td>4</td>
+                        <td id="square-4-a" class="column-a"></td>
+                        <td id="square-4-b" class="column-b"></td>
+                        <td id="square-4-c" class="column-c"></td>
+                        <td id="square-4-d" class="column-d"></td>
+                        <td id="square-4-e" class="column-e"></td>
+                        <td id="square-4-f" class="column-f"></td>
+                        <td id="square-4-g" class="column-g"></td>
+                        <td id="square-4-h" class="column-h"></td>
+                    </tr>
+                    <tr id="row-3">
+                        <td>3</td>
+                        <td id="square-3-a" class="column-a"></td>
+                        <td id="square-3-b" class="column-b"></td>
+                        <td id="square-3-c" class="column-c"></td>
+                        <td id="square-3-d" class="column-d"></td>
+                        <td id="square-3-e" class="column-e"></td>
+                        <td id="square-3-f" class="column-f"></td>
+                        <td id="square-3-g" class="column-g"></td>
+                        <td id="square-3-h" class="column-h"></td>
+                    </tr>
+                    <tr id="row-2">
+                        <td>2</td>
+                        <td class="white pawn column-a" id="square-2-a">♙</td>
+                        <td class="white pawn column-b" id="square-2-b">♙</td>
+                        <td class="white pawn column-c" id="square-2-c">♙</td>
+                        <td class="white pawn column-d" id="square-2-d">♙</td>
+                        <td class="white pawn column-e" id="square-2-e">♙</td>
+                        <td class="white pawn column-f" id="square-2-f">♙</td>
+                        <td class="white pawn column-g" id="square-2-g">♙</td>
+                        <td class="white pawn column-h" id="square-2-h">♙</td>
+                    </tr>
+                    <tr id="row-1">
+                        <td>1</td>
+                        <td class="white rook column-a" id="square-1-a">♖</td>
+                        <td class="white knight column-b" id="square-1-b">♘</td>
+                        <td class="white bishop column-c" id="square-1-c">♗</td>
+                        <td class="white queen column-d" id="square-1-d">♕</td>
+                        <td class="white king column-e" id="square-1-e">♔</td>
+                        <td class="white bishop column-f" id="square-1-f">♗</td>
+                        <td class="white knight column-g" id="square-1-g">♘</td>
+                        <td class="white rook column-h" id="square-1-h">♖</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Resources</h2>
+            <ul>
+                <li>
+                    <a href="https://www.w3schools.com/jquery/jquery_selectors.asp" target="_blank">
+                        W3Schools: jQuery Selectors Tutorial
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp" target="_blank">
+                        W3Schools: jQuery Selectors Reference
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
